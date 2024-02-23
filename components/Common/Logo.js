@@ -2,7 +2,7 @@
 import * as React from 'react'
 
 const Logo = (props) => (
-  <img src="https://cdn.jsdelivr.net/gh/An-Jhon/image_bed/202402231430404.png" width="24" height="24" />
+  <img src="https://cdn.jsdelivr.net/gh/An-Jhon/image_bed/202402231446700.png" width="30" height="30" />
 )
 
 export default Logo
