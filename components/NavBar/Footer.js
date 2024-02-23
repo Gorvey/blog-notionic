@@ -61,7 +61,7 @@ const Footer = ({ fullWidth }) => {
   return (
     <motion.div
       className={`mt-6 flex-shrink-0 m-auto w-full text-gray-600 dark:text-gray-300 transition-all ${
-        !fullWidth ? 'max-w-3xl md:px-4' : 'px-4 md:px-24'
+        !fullWidth ? 'max-w-custom-5xl md:px-4' : 'px-4 md:px-24'
       }`}
     >
       <footer className='max-w-screen-2xl px-4 md:px-4 mx-auto'>
