@@ -18,6 +18,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      maxWidth: {
+        '52': '52rem',
+      },
       colors: {
         day: {
           DEFAULT: BLOG.lightBackground || '#ffffff'
