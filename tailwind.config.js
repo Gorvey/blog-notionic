@@ -19,7 +19,7 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
-        '52': '52rem',
+        '52r': '52rem',
       },
       colors: {
         day: {
