@@ -6,13 +6,14 @@ const Social = () => {
     <div className='flex gap-4'>
 
       <Link
-        href={`${BLOG.socialLink.telegram}`}
+        // href={`${BLOG.socialLink.telegram}`}
+        href='/contact'
         scroll={false}
         target='_blank'
         aria-label='Telegram'
         className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
       >
-        <svg
+        {/* <svg
           className='w-5 h-5'
           width='24'
           height='24'
@@ -22,10 +23,22 @@ const Social = () => {
         >
           <path fill='none' d='M0 0h24v24H0z' />
           <path d='M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0 2C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.11-8.83l-2.498-.779c-.54-.165-.543-.537.121-.804l9.733-3.76c.565-.23.885.061.702.79l-1.657 7.82c-.116.557-.451.69-.916.433l-2.551-1.888-1.189 1.148c-.122.118-.221.219-.409.244-.187.026-.341-.03-.454-.34l-.87-2.871-.012.008z' />
+        </svg> */}
+        <svg 
+          className='w-5 h-5'
+          width='24'
+          height='24'
+          viewBox='0 0 24 24'
+          fill='currentColor'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path d="M28.5 25.6H5.5C3.4 25.6 1.70001 23.8929 1.70001 21.7841V5.41592C1.70001 3.30714 3.4 1.59998 5.5 1.59998H28.5C30.6 1.59998 32.3 3.30714 32.3 5.41592V21.7841C32.4 23.8929 30.6 25.6 28.5 25.6Z" stroke="#4F4F4F" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+          <path d="M17 14.9557L2.60001 3.60834" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+          <path d="M31.4 3.60834L17 14.9557" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
         </svg>
       </Link>
 
-      <Link
+      {/* <Link
         href={`${BLOG.socialLink.twitter}`}
         scroll={false}
         target='_blank'
@@ -43,7 +56,7 @@ const Social = () => {
           <path fill='none' d='M0 0h24v24H0z' />
           <path d='M15.3 5.55a2.9 2.9 0 0 0-2.9 2.847l-.028 1.575a.6.6 0 0 1-.68.583l-1.561-.212c-2.054-.28-4.022-1.226-5.91-2.799-.598 3.31.57 5.603 3.383 7.372l1.747 1.098a.6.6 0 0 1 .034.993L7.793 18.17c.947.059 1.846.017 2.592-.131 4.718-.942 7.855-4.492 7.855-10.348 0-.478-1.012-2.141-2.94-2.141zm-4.9 2.81a4.9 4.9 0 0 1 8.385-3.355c.711-.005 1.316.175 2.669-.645-.335 1.64-.5 2.352-1.214 3.331 0 7.642-4.697 11.358-9.463 12.309-3.268.652-8.02-.419-9.382-1.841.694-.054 3.514-.357 5.144-1.55C5.16 15.7-.329 12.47 3.278 3.786c1.693 1.977 3.41 3.323 5.15 4.037 1.158.475 1.442.465 1.973.538z' />
         </svg>
-      </Link>
+      </Link> */}
 
       <Link
         href={`${BLOG.socialLink.github}`}
