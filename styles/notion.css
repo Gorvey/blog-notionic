@@ -162,3 +162,7 @@ svg + .notion-page-title-text {
 .lazy-image-preview {
   border-radius: 50%;
 }
+
+.notion-page-title-text {
+  font-size: 16px;
+}
