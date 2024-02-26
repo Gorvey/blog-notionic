@@ -152,7 +152,13 @@ svg + .notion-page-title-text {
   @apply hidden;
 }
 
+
+/* 定制化样式 */
 .lazy-image-real {
   top: 0;
+  border-radius: 50%;
+}
+
+.lazy-image-preview {
   border-radius: 50%;
 }
