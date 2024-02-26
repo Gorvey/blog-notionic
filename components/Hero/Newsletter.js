@@ -30,7 +30,7 @@ const NewsletterHero = ({ blockMap }) => {
             frontMatter={{}}
             subPageTitle={null}
           />
-          <Social />
+          {/* <Social /> */}
           <h2 className='text-xl pt-8 pb-4 font-light text-gray-500 dark:text-day'>
             {t.HERO.NEWSLETTER.SUBSCRIPTION_HEAD}
           </h2>

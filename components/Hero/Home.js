@@ -36,9 +36,10 @@ const Hero = ({ blockMap }) => {
             frontMatter={{}}
             subPageTitle={null}
           />
-              {
-                // <Social />
-              }
+          {/* 
+            注释社交图标
+            <Social />  
+          */}
           <div className='flex flex-col sm:flex-row sm:justify-center gap-4 mt-6'>
             <Link passHref href='/contact' scroll={false}>
               <button className='w-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 inline-flex py-3 px-5 rounded-lg items-center'>
