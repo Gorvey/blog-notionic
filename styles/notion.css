@@ -151,3 +151,7 @@ svg + .notion-page-title-text {
 .notion-collection-row {
   @apply hidden;
 }
+
+.lazy-image-real {
+  top: 0;
+}
