@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import BLOG from '@/blog.config'
+import { MailIcon } from '@heroicons/react/outline'
 
 const Social = () => {
   return (
