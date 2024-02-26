@@ -154,4 +154,5 @@ svg + .notion-page-title-text {
 
 .lazy-image-real {
   top: 0;
+  border-radius: 50%;
 }
