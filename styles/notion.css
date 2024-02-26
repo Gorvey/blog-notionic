@@ -156,13 +156,23 @@ svg + .notion-page-title-text {
 /* 定制化样式 */
 .lazy-image-real {
   top: 0;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px; /* 设置图片的宽度和高度为你想要的大小 */
+  object-fit: cover; /* 将图片缩放到指定的宽度和高度内 */
+  border-radius: 50%; /* 设置圆角半径为图片的短边的一半 */
 }
 
-.lazy-image-preview {
-  border-radius: 50%;
-}
-
+/* 友链卡片的友链名称 */
 .notion-page-title-text {
   font-size: 16px;
+}
+
+.notion-collection-card {
+  /* 友链卡片的圆角设置 */
+  border-radius: 20px;
+}
+
+/* 友链卡片中的描述文本 */
+.notion-property-text {
+  line-height: 2rem;
 }
