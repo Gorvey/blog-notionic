@@ -7,10 +7,11 @@ const Social = () => {
 
       <Link
         // href={`${BLOG.socialLink.telegram}`}
+        passHref
         href='/contact'
         scroll={false}
         target='_blank'
-        // aria-label='Telegram'
+        aria-label='Mail'
         className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
       >
         {/* <svg
@@ -24,16 +25,16 @@ const Social = () => {
           <path fill='none' d='M0 0h24v24H0z' />
           <path d='M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0 2C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.11-8.83l-2.498-.779c-.54-.165-.543-.537.121-.804l9.733-3.76c.565-.23.885.061.702.79l-1.657 7.82c-.116.557-.451.69-.916.433l-2.551-1.888-1.189 1.148c-.122.118-.221.219-.409.244-.187.026-.341-.03-.454-.34l-.87-2.871-.012.008z' />
         </svg> */}
-        <svg  
-          className='w-5 h-5'
-          width='24'
-          height='24'
-          viewBox='0 0 24 24'
-          fill='currentColor'
-          xmlns='http://www.w3.org/2000/svg'
+        <svg 
+          fill="none" 
+          height="24" 
+          stroke-width="1.5" 
+          viewBox="0 0 24 24" 
+          width="24" 
+          xmlns="http://www.w3.org/2000/svg"
         >
-            <path d="M32,0C14.327,0,0,14.327,0,32s14.327,32,32,32s32-14.327,32-32S49.673,0,32,0z M32,62C15.432,62,2,48.568,2,32.001,C2,15.432,15.432,2,32,2c16.568,0,30,13.432,30,30.001C62,48.568,48.568,62,32,62z"/>
-            <path d="M46,21H18c-1.104,0-2,0.896-2,2v18c0,1.104,0.896,2,2,2h28c1.104,0,2-0.896,2-2V23C48,21.896,47.104,21,46,21z,M44.205,23L32,35L19.891,23H44.205z M18,41V24.006l9.589,9.589L20.061,41H18z M22.985,41l6.081-5.927l1.58,1.579,c0.781,0.781,2.047,0.781,2.829,0l1.531-1.531L41.087,41H22.985z M46,41h-1.939l-7.527-7.405L46,24.128V41z"/>
+          <path d="M7 9L12 12.5L17 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17V7C2 5.89543 2.89543 5 4 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17Z" stroke="currentColor" stroke-width="1.5"/>
         </svg>
       </Link>
 
