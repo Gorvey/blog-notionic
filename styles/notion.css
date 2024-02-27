@@ -225,10 +225,10 @@ button.inline-block.bg-gray-100.dark\:bg-gray-700.hover\:bg-gray-200.dark\:hover
   padding-bottom: 12px;
   height: 48px;
 }
-/* 按钮文字 */
 p.text-gray-400.h-5 {
-  color: #4d5562ea;
+  color: #4d5562ea;   /* 按钮文字 */
 }
+
 /* 联系页面文本框 */
 textarea#message {
   height: 250px;
@@ -239,9 +239,22 @@ textarea#message {
 
 /* 代码块相关 */
 code[class*=language-], div[class*=language-], pre[class*=language-] {
-  color: #E4EAF1 !important;
+  color: #E4EAF1 !important;   /* 非关键字代码颜色 */
 }
-
 pre.notion-code {
   background-color: #4D5562 !important;  /* 代码块颜色 */
+  border-radius: 10px;   /* 代码块圆角 */
+}
+.notion-inline-code {
+  /* 行内代码块 */
+  color: #4F5561;
+  background-color: #E4EAF1;
+}
+
+/* 修复标题合并在一行的问题（一级标题后面紧跟二级、三级标题则会显示在同一行；通过改变标签的显示类型来修正） */
+.notion-h,
+.notion-h1,
+.notion-h2,
+.notion-h3 {
+  display: block;
 }
