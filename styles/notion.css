@@ -242,6 +242,6 @@ code[class*=language-], div[class*=language-], pre[class*=language-] {
   color: #E4EAF1 !important;
 }
 
-pre.notion-code[class*=language-] {
+pre.notion-code {
   background-color: #4D5562 !important;  /* 代码块颜色 */
 }
