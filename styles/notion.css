@@ -237,43 +237,11 @@ textarea#message {
   box-shadow: 0 0 0 1px hsla(0,0%,6%,.1), 0 2px 4px hsla(0,0%,6%,.1);
 }
 
-/* 代码块相关
-.notion-code {
-  background: hsl(230, 1%, 98%);
-  color: hsl(230, 8%, 24%);
-  font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  line-height: 1.5;
-  -moz-tab-size: 2;
-  -o-tab-size: 2;
-  tab-size: 2;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  padding: 1em;
-  margin: 0.5em 0;
-  overflow: auto;
-  border-radius: 0.3em;
-  }
-  
-  .notion-code-copy-button {
-  background: hsl(230, 1%, 90%);
-  color: hsl(230, 6%, 44%);
-  padding: 0.1em 0.4em;
-  border-radius: 0.3em;
-  }
-  
-  .notion-code-copy-button:hover,
-  .notion-code-copy-button:focus {
-  background: hsl(230, 1%, 78%);
-  color: hsl(230, 8%, 24%);
-  }
-  
-  .notion-code-copy-tooltip {
-  background: hsla(230, 8%, 24%, 0.05);
-  } */
+/* 代码块相关 */
+code[class*="language-"] {
+	color: #F6F8FA;   /* 代码颜色 */
+}
+
+pre[class*="language-"] {
+	color: #4D5562;   /* 代码块颜色 */
+}
