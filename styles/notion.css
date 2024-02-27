@@ -236,3 +236,32 @@ textarea#message {
   background-color: hsla(0,0%,100%,0);
   box-shadow: 0 0 0 1px hsla(0,0%,6%,.1), 0 2px 4px hsla(0,0%,6%,.1);
 }
+
+/* 代码块相关 */
+.notion-code {
+  @apply border border-gray-200 dark:border-none rounded-lg p-4 mb-4;
+  font-size: var(--prism-font-size);
+  line-height: var(--prism-line-height);
+  background-color: var(--prism-background-color);
+  overflow: auto;
+}
+
+.notion-code code {
+  display: block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.notion-code-copy-button {
+  @apply text-gray-600 dark:text-gray-400 bg-day dark:bg-night rounded-lg p-2 mt-2;
+  font-size: 1em;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+}
+
+.notion-code-copy-button:hover {
+  background-color: var(--notion-primary-color);
+  color: var(--notion-primary-color-text);
+}
