@@ -238,10 +238,10 @@ textarea#message {
 }
 
 /* 代码块相关 */
-code[class*="language-"] {
-	color: #F6F8FA !important;   /* 代码颜色 */
+code[class*=language-], div[class*=language-], pre[class*=language-] {
+  color: #E4EAF1 !important;
 }
 
-pre[class*="language-"] {
+div[class*=language-], pre[class*=language-] {
 	color: #4D5562 !important;   /* 代码块颜色 */
 }
