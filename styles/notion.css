@@ -237,7 +237,7 @@ textarea#message {
   box-shadow: 0 0 0 1px hsla(0,0%,6%,.1), 0 2px 4px hsla(0,0%,6%,.1);
 }
 
-/* 代码块相关 */
+/* 代码块相关
 .notion-code {
   background: hsl(230, 1%, 98%);
   color: hsl(230, 8%, 24%);
@@ -276,4 +276,4 @@ textarea#message {
   
   .notion-code-copy-tooltip {
   background: hsla(230, 8%, 24%, 0.05);
-  }
+  } */
