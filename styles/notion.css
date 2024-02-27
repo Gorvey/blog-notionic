@@ -189,3 +189,43 @@ a.notion-collection-card.notion-collection-card-size-small {
   background-color: rgba(255, 255, 255, 0.3); /* 设置友链卡片透明度 */
   border-radius: 20px; /* 友链卡片的圆角设置 */
 }
+
+/* 评论框调整 */
+/* 评论内容 */
+textarea#comment {
+  height: 140px;
+  border-radius: 20px;
+  background-color: #F9F9FB;
+  box-shadow: 0 0 0 1px hsla(0,0%,6%,.1), 0 2px 4px hsla(0,0%,6%,.1);
+}
+/* 评论邮箱 */
+input#mail {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  height: 38px;
+  border-radius: 10px;
+  background-color: #F9F9FB;
+  box-shadow: 0 0 0 1px hsla(0,0%,6%,.1), 0 2px 4px hsla(0,0%,6%,.1);
+}
+/* 评论名称 */
+input#name {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  height: 38px;
+  border-radius: 10px;
+  background-color: #F9F9FB;
+  box-shadow: 0 0 0 1px hsla(0,0%,6%,.1), 0 2px 4px hsla(0,0%,6%,.1);
+}
+/* 提交按钮 */
+button.inline-block.bg-gray-100.dark\:bg-gray-700.hover\:bg-gray-200.dark\:hover\:bg-gray-600.text-center.rounded-lg.outline-none.transition.duration-100.px-8.py-3 {
+  background-color: #E5E7EB;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  height: 48px;
+}
+/* 按钮文字 */
+p.text-gray-400.h-5 {
+  color: #4D5562;
+}
