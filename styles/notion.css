@@ -195,7 +195,7 @@ a.notion-collection-card.notion-collection-card-size-small {
 textarea#comment {
   height: 120px;
   border-radius: 20px;
-  background-color: hsla(0,0%,100%,0.3);
+  background-color: hsla(0,0%,100%,0);
   box-shadow: 0 0 0 1px hsla(0,0%,6%,.1), 0 2px 4px hsla(0,0%,6%,.1);
 }
 /* 评论邮箱 */
@@ -204,7 +204,7 @@ input#mail {
   padding-bottom: 4px;
   height: 38px;
   border-radius: 10px;
-  background-color: hsla(0,0%,100%,0.3);
+  background-color: hsla(0,0%,100%,0);
   box-shadow: 0 0 0 1px hsla(0,0%,6%,.1), 0 2px 4px hsla(0,0%,6%,.1);
 }
 /* 评论名称 */
@@ -213,7 +213,7 @@ input#name {
   padding-bottom: 4px;
   height: 38px;
   border-radius: 10px;
-  background-color: hsla(0,0%,100%,0.3);
+  background-color: hsla(0,0%,100%,0);
   box-shadow: 0 0 0 1px hsla(0,0%,6%,.1), 0 2px 4px hsla(0,0%,6%,.1);
 }
 /* 提交按钮 */
@@ -233,6 +233,6 @@ p.text-gray-400.h-5 {
 textarea#message {
   height: 250px;
   border-radius: 20px;
-  background-color: hsla(0,0%,100%,0.3);
+  background-color: hsla(0,0%,100%,0);
   box-shadow: 0 0 0 1px hsla(0,0%,6%,.1), 0 2px 4px hsla(0,0%,6%,.1);
 }
