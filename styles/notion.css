@@ -154,12 +154,15 @@ svg + .notion-page-title-text {
 
 
 /* 定制化样式 */
+/* 友链头像预览，修复只显示一半的图片 */
 .lazy-image-real {
   top: 0;
-  width: 200px;
-  height: 200px; /* 设置图片的宽度和高度为你想要的大小 */
-  object-fit: cover; /* 将图片缩放到指定的宽度和高度内 */
+}
+
+/* 友链头像设置圆角，设置图片高度（修复不是方形图片会变成椭圆的问题） */
+.notion-collection-card-property .notion-page-title-icon {
   border-radius: 50%; /* 设置圆角半径为图片的短边的一半 */
+  height: 22px;
 }
 
 /* 友链卡片的友链名称 */
@@ -167,12 +170,22 @@ svg + .notion-page-title-text {
   font-size: 16px;
 }
 
-.notion-collection-card {
-  /* 友链卡片的圆角设置 */
-  border-radius: 20px;
-}
-
-/* 友链卡片中的描述文本 */
+/* 友链卡片中的描述文本行高 */
 .notion-property-text {
   line-height: 2rem;
+}
+
+/* 友链链接设置 */
+input.nested-form-link.notion-link {
+  color: #5979EE;
+  /* color: rgb(238,122,101);
+  color: rgb(77,77,245);
+  color: #3366FF; */
+  text-decoration: none; /* 取消下划线 */
+}
+
+/* 友链卡片整体设置 */
+a.notion-collection-card.notion-collection-card-size-small {
+  background-color: rgba(255, 255, 255, 0.3); /* 设置友链卡片透明度 */
+  border-radius: 20px; /* 友链卡片的圆角设置 */
 }
