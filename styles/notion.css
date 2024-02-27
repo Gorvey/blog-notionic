@@ -239,29 +239,41 @@ textarea#message {
 
 /* 代码块相关 */
 .notion-code {
-  @apply border border-gray-200 dark:border-none rounded-lg p-4 mb-4;
-  font-size: var(--prism-font-size);
-  line-height: var(--prism-line-height);
-  background-color: var(--prism-background-color);
+  background: hsl(230, 1%, 98%);
+  color: hsl(230, 8%, 24%);
+  font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  padding: 1em;
+  margin: 0.5em 0;
   overflow: auto;
-}
-
-.notion-code code {
-  display: block;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-.notion-code-copy-button {
-  @apply text-gray-600 dark:text-gray-400 bg-day dark:bg-night rounded-lg p-2 mt-2;
-  font-size: 1em;
-  border: none;
-  box-shadow: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease-out;
-}
-
-.notion-code-copy-button:hover {
-  background-color: var(--notion-primary-color);
-  color: var(--notion-primary-color-text);
-}
+  border-radius: 0.3em;
+  }
+  
+  .notion-code-copy-button {
+  background: hsl(230, 1%, 90%);
+  color: hsl(230, 6%, 44%);
+  padding: 0.1em 0.4em;
+  border-radius: 0.3em;
+  }
+  
+  .notion-code-copy-button:hover,
+  .notion-code-copy-button:focus {
+  background: hsl(230, 1%, 78%);
+  color: hsl(230, 8%, 24%);
+  }
+  
+  .notion-code-copy-tooltip {
+  background: hsla(230, 8%, 24%, 0.05);
+  }
