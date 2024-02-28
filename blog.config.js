@@ -2,7 +2,7 @@ const BLOG = {
   title: 'Anjhon',
   author: 'Anjhon',
   email: 'anjhon@163.com',
-  link: 'https://www.anjhon.top/',
+  link: 'https://www.anjhon.top',
   newsletter: 'Notionic Weekly',
   description: '但行好事，莫问前程',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
