@@ -268,6 +268,7 @@ pre.notion-code {
 /* 表格撑大展示修复 */
 .notion-simple-table {
   @apply whitespace-nowrap overflow-x-auto block w-full border-0 !important;   /* 设置表格超出后显示滑动条 */
+  line-height: 1.5rem;   /* 设置表格内行高（默认是用 notion 的行高 2） */
 }
 
 .notion-simple-table td {
