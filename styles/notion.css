@@ -271,5 +271,6 @@ pre.notion-code {
 }
 
 .notion-simple-table td {
-  white-space: pre !important;   /* 设置单元格内文本不自动换行而导致表格被撑大 */
+  border: 1px solid darkgray;   /* 设置表格边框颜色 */
+  white-space: pre;   /* 设置单元格内文本不自动换行而导致表格被撑大 */
 }
