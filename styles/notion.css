@@ -250,9 +250,8 @@ pre.notion-code {
 }
 .notion-inline-code {
   /* 行内代码块 */
-  /* color: #4F5561; */
-  color: #E4EAF1;
-  background-color: #09111E;
+  color: #4D5562;
+  background-color: #E4EAF1;
 }
 
 /* 修复标题合并在一行的问题（一级标题后面紧跟二级、三级标题则会显示在同一行；通过改变标签的显示类型来修正） */
