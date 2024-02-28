@@ -264,3 +264,8 @@ pre.notion-code {
   border-radius: 20px;   /* 圆角 */
   background-color: #fa96007b;   /* 背景色 */
 }
+
+/* 表格撑大展示修复 */
+.notion-simple-table {
+  @apply whitespace-nowrap overflow-x-auto block w-full border-0 !important;
+}
