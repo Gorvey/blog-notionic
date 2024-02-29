@@ -267,6 +267,11 @@ pre.notion-code {
   border-radius: 20px;   /* 圆角 */
   background-color: #D7E3F4;   /* 背景色 */
 }
+/* 引用块中的头像设置 */
+.lazy-image-wrapper.lazy-image-loaded.notion-page-icon {
+  height: 22px;
+  border-radius: 50%;
+}
 
 /* 表格撑大展示修复 */
 .notion-simple-table {
