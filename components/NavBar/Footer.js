@@ -6,7 +6,8 @@ import {
   UserIcon,
   UsersIcon,
   BookOpenIcon,
-  MailIcon
+  MailIcon,
+  HeadphonesIcon
 } from '@heroicons/react/outline'
 import Social from '../Common/Social.js'
 import { motion } from 'framer-motion'
@@ -55,6 +56,13 @@ const Footer = ({ fullWidth }) => {
       to: '/contact',
       icon: <MailIcon className='inline-block mb-1 h-5 w-5' />,
       show: BLOG.pagesShow.contact
+    },
+    {
+      id: 4,
+      name: t.NAV.MUSIC,
+      to: '/music',
+      icon: <HeadphonesIcon className='inline-block mb-1 h-5 w-5' />,
+      show: BLOG.pagesShow.music
     }
   ]
 
