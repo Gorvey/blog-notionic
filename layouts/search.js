@@ -25,12 +25,15 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
 
   // 在搜索结果发生变化时，更新 showTags 状态
   useEffect(() => {
-    if (filteredBlogPosts.length > 0) {
-      setShowTags(false)
-    } else {
-      setShowTags(true)
+    // 只有当搜索框中有输入时，才更新 showTags 状态
+    if (searchValue !== '') {
+      if (filteredBlogPosts.length > 0) {
+        setShowTags(false)
+      } else {
+        setShowTags(true)
+      }
     }
-  }, [filteredBlogPosts])
+  }, [filteredBlogPosts, searchValue])
 
   return (
     <Container>
