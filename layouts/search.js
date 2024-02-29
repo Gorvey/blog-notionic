@@ -70,14 +70,14 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
           ></path>
         </svg>
       </div>
-      {/* 只有当 showTags 为 true 时才渲染 Tags 组件 */}
-      {showTags && <Tags tags={tags} currentTag={currentTag} />}
       <div className='article-container my-8'>
         {!filteredBlogPosts.length && (
           <p className='text-gray-500 dark:text-gray-300'>
             {t.SEARCH.NOT_FOUND}
           </p>
         )}
+        {/* 只有当 showTags 为 true 时才渲染 Tags 组件 */}
+        {showTags && <Tags tags={tags} currentTag={currentTag} />}
         {filteredBlogPosts.slice(0, 20).map((post) => (
           <BlogPost key={post.id} post={post} />
         ))}
