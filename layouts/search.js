@@ -48,6 +48,8 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
           ></path>
         </svg>
       </div>
+      {/* 修改只有当没有搜索到结果时才显示标签，搜索到结果则不显示标签 */}
+      {filteredBlogPosts.length === 0 && <Tags tags={tags} currentTag={currentTag} />}
       <Tags tags={tags} currentTag={currentTag} />
       <div className='article-container my-8'>
         {!filteredBlogPosts.length && (
