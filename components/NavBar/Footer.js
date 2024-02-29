@@ -6,9 +6,9 @@ import {
   UserIcon,
   UsersIcon,
   BookOpenIcon,
-  MailIcon,
-  MusicalNoteIcon
+  MailIcon
 } from '@heroicons/react/outline'
+import { PlayCircleIcon } from "@heroicons/react/24/outline"
 import Social from '../Common/Social.js'
 import { motion } from 'framer-motion'
 
@@ -54,7 +54,7 @@ const Footer = ({ fullWidth }) => {
       id: 3,
       name: t.NAV.MUSIC,
       to: '/music',
-      icon: <MusicalNoteIcon className='inline-block mb-1 h-5 w-5' />,
+      icon: <PlayCircleIcon className='inline-block mb-1 h-5 w-5' />,
       show: BLOG.pagesShow.music
     },
     {
