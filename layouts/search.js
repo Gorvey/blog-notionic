@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import BlogPost from '@/components/BlogPost'
 import Container from '@/components/Container'
 import Tags from '@/components/Common/Tags'
@@ -19,6 +19,18 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
       return searchContent.toLowerCase().includes(searchValue.toLowerCase())
     })
   }
+
+  // 新增状态变量 showTags，用于控制是否显示标签
+  const [showTags, setShowTags] = useState(true)
+
+  // 在搜索结果发生变化时，更新 showTags 状态
+  useEffect(() => {
+    if (filteredBlogPosts.length > 0) {
+      setShowTags(false)
+    } else {
+      setShowTags(true)
+    }
+  }, [filteredBlogPosts])
 
   return (
     <Container>
@@ -49,7 +61,7 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
         </svg>
       </div>
       {/* 修改只有当没有搜索到结果时才显示标签，搜索到结果则不显示标签 */}
-      {filteredBlogPosts.length === 0 && <Tags tags={tags} currentTag={currentTag} />}
+      {showTags && <Tags tags={tags} currentTag={currentTag} />}
       {/* <Tags tags={tags} currentTag={currentTag} /> */}
       <div className='article-container my-8'>
         {!filteredBlogPosts.length && (
