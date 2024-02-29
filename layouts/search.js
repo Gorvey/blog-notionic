@@ -6,9 +6,8 @@ import PropTypes from 'prop-types'
 import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
 
-const SearchLayout = ({ tags, posts, currentTag, onTagSelect }) => {
+const SearchLayout = ({ tags, posts, currentTag }) => {
   const [searchValue, setSearchValue] = useState('')
-  const [selectedTag, setSelectedTag] = useState(currentTag);
   const { locale } = useRouter()
   const t = lang[locale]
 
@@ -26,16 +25,22 @@ const SearchLayout = ({ tags, posts, currentTag, onTagSelect }) => {
 
   // 在搜索结果发生变化时，更新 showTags 状态
   useEffect(() => {
+    // 只有当搜索框中有输入时，才更新 showTags 状态
     if (searchValue !== '') {
-      if (filteredBlogPosts.length > 0 || !selectedTag) {
-        setShowTags(false);
+      if (filteredBlogPosts.length > 0) {
+        setShowTags(false)
       } else {
-        setShowTags(true);
+        setShowTags(true)
       }
     } else {
-      setShowTags(true);
+      // 当搜索框为空时，根据 currentTag 的值来更新 showTags 状态
+      if (currentTag) {
+        setShowTags(false)
+      } else {
+        setShowTags(true)
+      }
     }
-  }, [filteredBlogPosts, searchValue, selectedTag]);
+  }, [filteredBlogPosts, searchValue, currentTag])
 
   return (
     <Container>
@@ -43,8 +48,8 @@ const SearchLayout = ({ tags, posts, currentTag, onTagSelect }) => {
         <input
           type='text'
           placeholder={
-            selectedTag
-              ? `${t.SEARCH.ONLY_SEARCH} #${selectedTag}`
+            currentTag
+              ? `${t.SEARCH.ONLY_SEARCH} #${currentTag}`
               : `${t.SEARCH.PLACEHOLDER}`
           }
           className='w-full bg-white dark:bg-gray-600 shadow-md rounded-lg outline-none focus:shadow p-3'
@@ -65,9 +70,8 @@ const SearchLayout = ({ tags, posts, currentTag, onTagSelect }) => {
           ></path>
         </svg>
       </div>
-      {/* 修改只有当没有搜索到结果时才显示标签，搜索到结果则不显示标签 */}
-      {showTags && <Tags tags={tags} currentTag={selectedTag} onTagSelect={setSelectedTag} />}
-      {/* <Tags tags={tags} currentTag={currentTag} /> */}
+      {/* 只有当 showTags 为 true 时才渲染 Tags 组件 */}
+      {showTags && <Tags tags={tags} currentTag={currentTag} />}
       <div className='article-container my-8'>
         {!filteredBlogPosts.length && (
           <p className='text-gray-500 dark:text-gray-300'>
@@ -84,7 +88,6 @@ const SearchLayout = ({ tags, posts, currentTag, onTagSelect }) => {
 SearchLayout.propTypes = {
   posts: PropTypes.array.isRequired,
   tags: PropTypes.object.isRequired,
-  currentTag: PropTypes.string,
-  onTagSelect: PropTypes.func,
-};
+  currentTag: PropTypes.string
+}
 export default SearchLayout
