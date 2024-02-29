@@ -6,8 +6,9 @@ import PropTypes from 'prop-types'
 import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
 
-const SearchLayout = ({ tags, posts, currentTag }) => {
+const SearchLayout = ({ tags, posts, currentTag, onTagSelect }) => {
   const [searchValue, setSearchValue] = useState('')
+  const [selectedTag, setSelectedTag] = useState(currentTag);
   const { locale } = useRouter()
   const t = lang[locale]
 
@@ -25,15 +26,16 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
 
   // 在搜索结果发生变化时，更新 showTags 状态
   useEffect(() => {
-    // 只有当搜索框中有输入时，才更新 showTags 状态
     if (searchValue !== '') {
-      if (filteredBlogPosts.length > 0) {
-        setShowTags(false)
+      if (filteredBlogPosts.length > 0 || !selectedTag) {
+        setShowTags(false);
       } else {
-        setShowTags(true)
+        setShowTags(true);
       }
+    } else {
+      setShowTags(true);
     }
-  }, [filteredBlogPosts, searchValue])
+  }, [filteredBlogPosts, searchValue, selectedTag]);
 
   return (
     <Container>
@@ -41,8 +43,8 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
         <input
           type='text'
           placeholder={
-            currentTag
-              ? `${t.SEARCH.ONLY_SEARCH} #${currentTag}`
+            selectedTag
+              ? `${t.SEARCH.ONLY_SEARCH} #${selectedTag}`
               : `${t.SEARCH.PLACEHOLDER}`
           }
           className='w-full bg-white dark:bg-gray-600 shadow-md rounded-lg outline-none focus:shadow p-3'
@@ -64,7 +66,7 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
         </svg>
       </div>
       {/* 修改只有当没有搜索到结果时才显示标签，搜索到结果则不显示标签 */}
-      {showTags && <Tags tags={tags} currentTag={currentTag} />}
+      {showTags && <Tags tags={tags} currentTag={selectedTag} onTagSelect={setSelectedTag} />}
       {/* <Tags tags={tags} currentTag={currentTag} /> */}
       <div className='article-container my-8'>
         {!filteredBlogPosts.length && (
@@ -82,6 +84,7 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
 SearchLayout.propTypes = {
   posts: PropTypes.array.isRequired,
   tags: PropTypes.object.isRequired,
-  currentTag: PropTypes.string
-}
+  currentTag: PropTypes.string,
+  onTagSelect: PropTypes.func,
+};
 export default SearchLayout
