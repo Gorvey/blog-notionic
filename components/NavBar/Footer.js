@@ -6,9 +6,9 @@ import {
   UserIcon,
   UsersIcon,
   BookOpenIcon,
-  MailIcon
+  MailIcon,
+  PlayCircleIcon
 } from '@heroicons/react/outline'
-import { PlayCircleIcon } from "@heroicons/react/24/outline"
 import Social from '../Common/Social.js'
 import { motion } from 'framer-motion'
 
