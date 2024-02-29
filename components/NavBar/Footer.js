@@ -8,8 +8,7 @@ import {
   BookOpenIcon,
   MailIcon,
   PlayIcon,
-  MicrophoneIcon,
-  ChatBubbleLeftEllipsisIcon
+  MicrophoneIcon
 } from '@heroicons/react/outline'
 
 import Social from '../Common/Social.js'
@@ -64,7 +63,7 @@ const Footer = ({ fullWidth }) => {
       id: 4,
       name: t.NAV.RECORD,
       to: '/record',
-      icon: <ChatBubbleLeftEllipsisIcon className='inline-block mb-1 h-5 w-5' />,
+      icon: <MicrophoneIcon className='inline-block mb-1 h-5 w-5' />,
       show: BLOG.pagesShow.record
     },
     {
