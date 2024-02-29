@@ -7,7 +7,7 @@ import {
   UsersIcon,
   BookOpenIcon,
   MailIcon,
-  HeadphonesIcon
+  MusicalNoteIcon
 } from '@heroicons/react/outline'
 import Social from '../Common/Social.js'
 import { motion } from 'framer-motion'
@@ -61,7 +61,7 @@ const Footer = ({ fullWidth }) => {
       id: 4,
       name: t.NAV.MUSIC,
       to: '/music',
-      icon: <HeadphonesIcon className='inline-block mb-1 h-5 w-5' />,
+      icon: <MusicalNoteIcon className='inline-block mb-1 h-5 w-5' />,
       show: BLOG.pagesShow.music
     }
   ]
