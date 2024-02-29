@@ -21,8 +21,7 @@ const BLOG = {
     projects: false,
     contact: true,
     books: true,
-    friends: true,
-    music: true,
+    friends: true
   },
   showWeChatPay: false,
   previewImagesEnabled: true,
