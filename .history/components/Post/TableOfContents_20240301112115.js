@@ -49,13 +49,15 @@ export default function TableOfContents ({ blockMap, frontMatter, pageTitle }) {
       )}
       {nodes.map((node, index) => (
         <div key={node.id} className={`px-2 pt-1 hover:bg-gray-200 hover:dark:bg-gray-700 rounded-lg ${index > 0 && 'border-t border-gray-200 dark:border-gray-700'}`}>
+          <div className={`pl-${node.indentLevel * 4}`}>
             <a
               data-target-id={node.id}
-              className={`block py-1 cursor-pointer pl-${node.indentLevel * 4}`}
+              className='block py-1 cursor-pointer'
               onClick={() => scrollTo(node.id)}
             >
               {node.text}
             </a>
+          </div>
         </div>
       ))}
     </div>
