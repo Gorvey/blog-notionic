@@ -34,7 +34,7 @@ export default function TableOfContents ({ blockMap, frontMatter, pageTitle }) {
 
   return (
     <div
-      className='hidden xl:block xl:fixed ml-4 text-sm text-gray-500 dark:text-gray-400 whitespace'
+      className='hidden xl:block xl:fixed ml-4 text-sm text-gray-500 dark:text-gray-400 whitespace-pre'
     >
       {pageTitle && (
         <Link
@@ -47,15 +47,17 @@ export default function TableOfContents ({ blockMap, frontMatter, pageTitle }) {
           <span className='ml-1'>{frontMatter.title}</span>
         </Link>
       )}
-      {nodes.map(node => (
-        <div key={node.id} className='px-2 hover:bg-gray-200 hover:dark:bg-gray-700 rounded-lg'>
-          <a
-            data-target-id={node.id}
-            className='block py-1 cursor-pointer'
-            onClick={() => scrollTo(node.id)}
-          >
-            {node.text}
-          </a>
+      {nodes.map((node, index) => (
+        <div key={node.id} className={`px-2 pt-1 hover:bg-gray-200 hover:dark:bg-gray-700 rounded-lg ${index > 0 && 'border-t border-gray-200 dark:border-gray-700'}`}>
+          <div className={`pl-${node.indentLevel * 4}`}>
+            <a
+              data-target-id={node.id}
+              className='block py-1 cursor-pointer'
+              onClick={() => scrollTo(node.id)}
+            >
+              {node.text}
+            </a>
+          </div>
         </div>
       ))}
     </div>
