@@ -47,20 +47,25 @@ export default function TableOfContents ({ blockMap, frontMatter, pageTitle }) {
           <span className='ml-1'>{frontMatter.title}</span>
         </Link>
       )}
-      {nodes.map((node, index) => (
-        <div key={node.id} className={`px-2 pt-1 hover:bg-gray-200 hover:dark:bg-gray-700 rounded-lg ${index > 0 && 'border-t border-gray-200 dark:border-gray-700'}`}>
-            <a
-              data-target-id={node.id}
-              className={`block py-1 cursor-pointer pl-${node.indentLevel * 4}`}
-              onClick={() => scrollTo(node.id)}
-            >
-              {node.text}
-            </a>
+      {nodes.map(node => (
+        <div
+          key={node.id}
+          // className={`px-2 hover:bg-gray-200 hover:dark:bg-gray-700 rounded-lg border-b border-gray-200 dark:border-gray-700 ml-${node.indentLevel * 4}`}
+          className={`px-2 hover:bg-gray-200 hover:dark:bg-gray-700 rounded-lg border-gray-200 dark:border-gray-700 ${node.indentLevel === 0 ? '' : node.indentLevel === 1 ? 'ml-4' : 'ml-8'}`}
+        >
+          <a
+            data-target-id={node.id}
+            className='block py-1 cursor-pointer'
+            onClick={() => scrollTo(node.id)}
+          >
+            {node.text}
+          </a>
         </div>
       ))}
     </div>
   )
 }
+
 
 TableOfContents.propTypes = {
   blockMap: PropTypes.object.isRequired,
