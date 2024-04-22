@@ -8,9 +8,7 @@ import NotFound from '@/components/NotFound'
 const Post = ({ post, blockMap }) => {
   const router = useRouter()
   if (router.isFallback) {
-    return (
-      <Loading />
-    )
+    return <Loading />
   }
   if (!post) {
     return <NotFound statusCode={404} />
@@ -39,7 +37,7 @@ export async function getStaticProps({ params: { slug } }) {
         post,
         blockMap
       },
-      revalidate: 1
+      revalidate: 86400
     }
   } catch (err) {
     console.error(err)

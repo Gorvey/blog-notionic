@@ -29,7 +29,7 @@ export async function getStaticProps() {
       showNext,
       blockMap
     },
-    revalidate: 1
+    revalidate: 86400
   }
 }
 

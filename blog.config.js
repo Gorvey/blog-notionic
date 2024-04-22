@@ -1,29 +1,36 @@
+/*
+ * @Author: zengzhe
+ * @Date: 2024-04-22 17:23:52
+ * @LastEditors: zengzhe
+ * @LastEditTime: 2024-04-22 17:53:49
+ * @Description:
+ */
 const BLOG = {
-  title: 'Anjhon',
-  author: 'Anjhon',
+  title: 'Gorvey的空间',
+  author: 'Gorvey',
   email: 'anjhon@163.com',
-  link: 'https://www.anjhon.top',
+  link: 'https://zmix.cn',
   newsletter: 'Notionic Weekly',
   description: '但行好事，莫问前程',
-  lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
+  lang: 'zh-CN', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   timezone: 'Asia/Shanghai', // See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
   appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#F6F8FA', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#212936', // use hex value, don't forget '#'
   path: '', // leave this empty unless you want to deploy Notionic in a folder
-  since: 2021, // If leave this empty, current year will be used.
+  since: 2024, // If leave this empty, current year will be used.
   postsPerPage: 10,
   sortByDate: true,
   pagesShow: {
     newsletter: true,
     notes: false,
-    projects: false,
+    projects: true,
     contact: false,
     books: true,
-    friends: true,
-    music: true,
-    record: true,
+    friends: false,
+    music: false,
+    record: false
   },
   showWeChatPay: false,
   previewImagesEnabled: true,
@@ -39,7 +46,8 @@ const BLOG = {
     keywords: ['Notionic', 'Anjhon', 'Blog', '机器学习', '生活'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
   },
-  notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS! Edit .env file!
+  notionPageId:
+    process.env.NOTION_PAGE_ID || '13990d4337d14fac9c59aadf8de1e69d', // DO NOT CHANGE THIS! Edit .env file!
   notionSpacesId: process.env.NOTION_SPACES_ID, // DO NOT CHANGE THIS! Edit .env file!
   notionAccessToken: process.env.NOTION_ACCESS_TOKEN, // Useful if you prefer not to make your database public
   notionDomain: 'izuolan.notion.site',

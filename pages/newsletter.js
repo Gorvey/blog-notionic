@@ -23,7 +23,7 @@ export async function getStaticProps() {
       posts,
       blockMap
     },
-    revalidate: 1
+    revalidate: 86400
   }
 }
 
