@@ -90,15 +90,16 @@ export async function getStaticProps({ params: { subpage } }) {
 
   // Allow only pages in your own space
   const NOTION_SPACES_ID = BLOG.notionSpacesId
-  const pageAllowed = (page) => {
-    // When page block space_id = NOTION_SPACES_ID
-    let allowed = false
-    Object.values(page.block).forEach((block) => {
-      if (!allowed && block.value && block.value.space_id) {
-        allowed = NOTION_SPACES_ID.includes(block.value.space_id)
-      }
-    })
-    return allowed
+  const pageAllowed = () => {
+    return true
+    // // When page block space_id = NOTION_SPACES_ID
+    // let allowed = false
+    // Object.values(page.block).forEach((block) => {
+    //   if (!allowed && block.value && block.value.space_id) {
+    //     allowed = NOTION_SPACES_ID.includes(block.value.space_id)
+    //   }
+    // })
+    // return allowed
   }
 
   if (!pageAllowed(blockMap)) {
