@@ -9,11 +9,12 @@ import {
   CollectionIcon,
   SparklesIcon,
   SearchIcon,
-  MenuIcon
+  MenuIcon,
+  MapIcon
 } from '@heroicons/react/outline'
 import Social from '../Common/Social.js'
 import ThemeSwitcher from './ThemeSwitcher.js'
-import LangSwitcher from './LangSwitcher.js'
+// import LangSwitcher from './LangSwitcher.js'
 import Logo from '@/components/Common/Logo'
 import { motion } from 'framer-motion'
 
@@ -60,6 +61,13 @@ const NavBar = () => {
       show: BLOG.pagesShow.projects
     },
     {
+      id: 5,
+      name: t.NAV.NAVIGATOR,
+      to: '/navigator',
+      icon: <MapIcon className='inline-block mb-1 h-5 w-5' />,
+      show: BLOG.pagesShow.navigator
+    },
+    {
       id: 4,
       name: t.NAV.SEARCH,
       to: '/search',
@@ -76,9 +84,8 @@ const NavBar = () => {
             link.show && (
               <Link passHref href={link.to} key={link.id} scroll={false}>
                 <li
-                  className={`${
-                    activeMenu === link.to ? 'bg-gray-200 dark:bg-gray-700' : ''
-                  } hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer rounded-lg block py-1 px-2 nav`}
+                  className={`${activeMenu === link.to ? 'bg-gray-200 dark:bg-gray-700' : ''
+                    } hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer rounded-lg block py-1 px-2 nav`}
                 >
                   <div className='font-light'>
                     {link.icon}
@@ -93,7 +100,7 @@ const NavBar = () => {
 
       <div className='nav-func-btn block'>
         <ThemeSwitcher />
-        <LangSwitcher />
+        {/* <LangSwitcher /> */}
       </div>
 
       {/* Mobile Phone Menu */}
@@ -166,9 +173,8 @@ const Header = ({ navBarTitle, fullWidth }) => {
     <>
       <div className='observer-element h-4 md:h-12' ref={sentinelRef}></div>
       <div
-        className={`sticky-nav m-auto w-full h-6 flex flex-row justify-between items-center mb-2 md:mb-12 py-8 bg-opacity-60 ${
-          !fullWidth ? 'max-w-4xl px-4' : 'px-4 md:px-24'
-        }`}
+        className={`sticky-nav m-auto w-full h-6 flex flex-row justify-between items-center mb-2 md:mb-12 py-8 bg-opacity-60 ${!fullWidth ? 'max-w-4xl px-4' : 'px-4 md:px-24'
+          }`}
         id='sticky-nav'
         ref={navRef}
       >
@@ -180,17 +186,15 @@ const Header = ({ navBarTitle, fullWidth }) => {
           </Link>
           {navBarTitle ? (
             <p
-              className={`ml-2 font-medium ${
-                !showTitle ? 'hidden' : 'hidden xl:block'
-              }`}
+              className={`ml-2 font-medium ${!showTitle ? 'hidden' : 'hidden xl:block'
+                }`}
             >
               {navBarTitle}
             </p>
           ) : (
             <p
-              className={`ml-2 font-medium ${
-                !showTitle ? 'hidden' : 'hidden xl:block'
-              }`}
+              className={`ml-2 font-medium ${!showTitle ? 'hidden' : 'hidden xl:block'
+                }`}
             >
               {BLOG.title},{' '}
               <span className='font-normal'>{BLOG.description}</span>

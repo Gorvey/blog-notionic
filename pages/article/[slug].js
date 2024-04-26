@@ -1,3 +1,10 @@
+/*
+ * @Author: zengzhe
+ * @Date: 2024-04-26 11:04:15
+ * @LastEditors: zengzhe
+ * @LastEditTime: 2024-04-26 19:10:23
+ * @Description: 
+ */
 import Layout from '@/layouts/layout'
 import { getAllPosts, getPostBlocks } from '@/lib/notion'
 import BLOG from '@/blog.config'
@@ -6,6 +13,7 @@ import Loading from '@/components/Loading'
 import NotFound from '@/components/NotFound'
 
 const Post = ({ post, blockMap }) => {
+  console.log(post)
   const router = useRouter()
   if (router.isFallback) {
     return <Loading />
@@ -19,7 +27,7 @@ const Post = ({ post, blockMap }) => {
 }
 
 export async function getStaticPaths() {
-  const posts = await getAllPosts({ onlyNewsletter: false })
+  const posts = await getAllPosts({ onlyPost: true })
   return {
     paths: posts.map((row) => `${BLOG.path}/article/${row.slug}`),
     fallback: true
@@ -27,7 +35,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const posts = await getAllPosts({ onlyNewsletter: false })
+  const posts = await getAllPosts({ onlyPost: true })
   const post = posts.find((t) => t.slug === slug)
 
   try {

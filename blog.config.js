@@ -2,13 +2,13 @@
  * @Author: zengzhe
  * @Date: 2024-04-22 17:23:52
  * @LastEditors: zengzhe
- * @LastEditTime: 2024-04-22 17:53:49
+ * @LastEditTime: 2024-04-26 16:35:03
  * @Description:
  */
 const BLOG = {
   title: 'Gorvey的空间',
   author: 'Gorvey',
-  email: 'anjhon@163.com',
+  email: 'gorvey76@outlook.com',
   link: 'https://zmix.cn',
   newsletter: 'Notionic Weekly',
   description: '但行好事，莫问前程',
@@ -23,12 +23,13 @@ const BLOG = {
   postsPerPage: 10,
   sortByDate: true,
   pagesShow: {
-    newsletter: true,
+    navigator: true,
+    newsletter: false,
     notes: false,
-    projects: true,
-    contact: false,
+    projects: false,
+    contact: true,
     books: true,
-    friends: false,
+    // friends: true,
     music: false,
     record: false
   },
@@ -39,7 +40,7 @@ const BLOG = {
   defaultCover: '/cover.jpg',
   socialLink: {
     twitter: '',
-    github: 'https://github.com/An-Jhon',
+    github: 'https://github.com/Gorvey',
     telegram: ''
   },
   seo: {

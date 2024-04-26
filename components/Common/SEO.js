@@ -1,25 +1,31 @@
+/*
+ * @Author: zengzhe
+ * @Date: 2024-04-26 09:30:38
+ * @LastEditors: zengzhe
+ * @LastEditTime: 2024-04-26 17:42:40
+ * @Description: 
+ */
 import BLOG from '@/blog.config'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 const SEO = ({ meta }) => {
-  const ogImage = `https://${BLOG.ogImageGenerateHost}/api/default?logo=${
-    BLOG.link
-  }/favicon.png&siteName=${encodeURIComponent(
-    BLOG.title?.trim()
-  )}&description=${encodeURIComponent(
-    BLOG.description?.trim()
-  )}&title=${encodeURIComponent(
-    meta.title?.trim()
-  )}&summary=${encodeURIComponent(
-    meta.description?.trim()
-  )}&theme=light&border=solid`
+  const ogImage = `https://${BLOG.ogImageGenerateHost}/api/default?logo=${BLOG.link
+    }/favicon.png&siteName=${encodeURIComponent(
+      BLOG.title?.trim()
+    )}&description=${encodeURIComponent(
+      BLOG.description?.trim()
+    )}&title=${encodeURIComponent(
+      meta.title?.trim()
+    )}&summary=${encodeURIComponent(
+      meta.description?.trim()
+    )}&theme=light&border=solid`
 
   const router = useRouter()
   const url = BLOG.path.length ? `${BLOG.link}/${BLOG.path}` : BLOG.link
   return (
     <Head>
-      <title>{meta.title}</title>
+      <title>{meta.title} | {BLOG.author}</title>
       {/* <meta content={BLOG.darkBackground} name='theme-color' /> */}
       <meta name='robots' content='follow, index' />
       <meta charSet='UTF-8' />
