@@ -40,7 +40,7 @@
     "react-notion-x": "^6.16.0",
     "sharp": "^0.30.5",
     "typed.js": "^2.1.0",
-    "use-ackee": "^3.0.0"
+    "use-ackee": "^3.0.1"
   },
   "devDependencies": {
     "@heroicons/react": "^1.0.5",
