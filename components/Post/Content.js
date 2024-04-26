@@ -5,7 +5,7 @@ import Link from 'next/link'
 import FormattedDate from '@/components/Common/FormattedDate'
 import TagItem from '@/components/Common/TagItem'
 import NotionRenderer from '@/components/Post/NotionRenderer'
-
+import AISummary from './AISummary'
 import { ChevronLeftIcon } from '@heroicons/react/outline'
 
 export default function Content(props) {
@@ -41,7 +41,10 @@ export default function Content(props) {
           )}
         </nav>
       )}
-      <div className="-mt-4 relative">
+      <div className='-mt-4 relative'>
+        {frontMatter.type[0] == 'Post' && (
+          <AISummary frontMatter={frontMatter}></AISummary>
+        )}
         <NotionRenderer
           blockMap={blockMap}
           previewImages={BLOG.previewImagesEnabled}

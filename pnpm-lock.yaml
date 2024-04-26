@@ -56,6 +56,12 @@ dependencies:
   sharp:
     specifier: ^0.30.5
     version: 0.30.7
+  type.js:
+    specifier: ^0.0.1
+    version: 0.0.1
+  typed.js:
+    specifier: ^2.1.0
+    version: 2.1.0
   use-ackee:
     specifier: ^3.0.0
     version: 3.0.1(react@18.2.0)
@@ -3989,6 +3995,10 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /type.js@0.0.1:
+    resolution: {integrity: sha512-0h595G4radjv0becIPEBYgHJTZbbsG0zT6NlU26MzU1LWGZ+f6gJLkfLhBBpynT48+92SC+R7KIla9wnVZ0PLA==}
+    dev: false
+
   /typed-array-length@1.0.4:
     resolution: {integrity: sha512-KjZypGq+I/H7HI5HlOoGHkWUUGq+Q0TPhQurLbyrVrvnKTBgzLhIJ7j6J/XTQOi0d1RjyZ0wdas8bKs2p0x3Ng==}
     dependencies:
@@ -3996,6 +4006,10 @@ packages:
       for-each: 0.3.3
       is-typed-array: 1.1.10
     dev: true
+
+  /typed.js@2.1.0:
+    resolution: {integrity: sha512-bDuXEf7YcaKN4g08NMTUM6G90XU25CK3bh6U0THC/Mod/QPKlEt9g/EjvbYB8x2Qwr2p6J6I3NrsoYaVnY6wsQ==}
+    dev: false
 
   /typescript@5.0.4:
     resolution: {integrity: sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==}

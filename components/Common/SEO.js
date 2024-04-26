@@ -3,29 +3,30 @@
  * @Date: 2024-04-26 09:30:38
  * @LastEditors: zengzhe
  * @LastEditTime: 2024-04-26 17:42:40
- * @Description: 
+ * @Description:
  */
 import BLOG from '@/blog.config'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 const SEO = ({ meta }) => {
-  const ogImage = `https://${BLOG.ogImageGenerateHost}/api/default?logo=${BLOG.link
-    }/favicon.png&siteName=${encodeURIComponent(
-      BLOG.title?.trim()
-    )}&description=${encodeURIComponent(
-      BLOG.description?.trim()
-    )}&title=${encodeURIComponent(
-      meta.title?.trim()
-    )}&summary=${encodeURIComponent(
-      meta.description?.trim()
-    )}&theme=light&border=solid`
+  const ogImage = `https://${BLOG.ogImageGenerateHost}/api/default?logo=${
+    BLOG.link
+  }/favicon.png&siteName=${encodeURIComponent(
+    BLOG.title?.trim()
+  )}&description=${encodeURIComponent(
+    BLOG.description?.trim()
+  )}&title=${encodeURIComponent(
+    meta.title?.trim()
+  )}&summary=${encodeURIComponent(
+    meta.description?.trim()
+  )}&theme=light&border=solid`
 
   const router = useRouter()
   const url = BLOG.path.length ? `${BLOG.link}/${BLOG.path}` : BLOG.link
   return (
     <Head>
-      <title>{meta.title} | {BLOG.author}</title>
+      <title>{meta.title}</title>
       {/* <meta content={BLOG.darkBackground} name='theme-color' /> */}
       <meta name='robots' content='follow, index' />
       <meta charSet='UTF-8' />
@@ -46,24 +47,15 @@ const SEO = ({ meta }) => {
         property='og:url'
         content={meta.slug ? `${url}/${meta.slug}` : `${url}${router.asPath}`}
       />
-      <meta
-        property='og:image'
-        content={ogImage || BLOG.defaultCover}
-      />
+      <meta property='og:image' content={ogImage || BLOG.defaultCover} />
       <meta property='og:type' content={meta.type} />
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:description' content={meta.description} />
       <meta name='twitter:title' content={meta.title} />
-      <meta
-        name='twitter:image'
-        content={ogImage || BLOG.defaultCover}
-      />
+      <meta name='twitter:image' content={ogImage || BLOG.defaultCover} />
       {meta.type === 'article' && (
         <>
-          <meta
-            property='article:published_time'
-            content={meta.date}
-          />
+          <meta property='article:published_time' content={meta.date} />
           <meta property='article:author' content={BLOG.author} />
         </>
       )}
