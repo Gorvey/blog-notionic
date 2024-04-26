@@ -8,7 +8,7 @@ import NotionRenderer from '@/components/Post/NotionRenderer'
 
 import { ChevronLeftIcon } from '@heroicons/react/outline'
 
-export default function Content (props) {
+export default function Content(props) {
   const { frontMatter, blockMap, pageTitle } = props
 
   return (
@@ -16,7 +16,7 @@ export default function Content (props) {
       {pageTitle && (
         <Link
           passHref
-          href={`${BLOG.path}/${frontMatter.slug}`}
+          href={`${BLOG.path}/article/${frontMatter.slug}`}
           scroll={false}
           className='block md:-ml-6 mb-2 text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300'
         >

@@ -1,3 +1,10 @@
+/*
+ * @Author: zengzhe
+ * @Date: 2024-04-26 09:30:38
+ * @LastEditors: zengzhe
+ * @LastEditTime: 2024-04-26 11:01:03
+ * @Description: 
+ */
 import BLOG from '@/blog.config'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
@@ -35,7 +42,7 @@ const Aside = ({ pageTitle, blockMap, frontMatter }) => {
             {pageTitle && (
               <Link
                 passHref
-                href={`${BLOG.path}/${frontMatter.slug}`}
+                href={`${BLOG.path}/article/${frontMatter.slug}`}
                 scroll={false}
                 className='text-gray-600 dark:text-day hover:text-gray-400 dark:hover:text-gray-400'
               >

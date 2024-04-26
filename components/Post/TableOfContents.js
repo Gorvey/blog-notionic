@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ChevronLeftIcon } from '@heroicons/react/outline'
 import BLOG from '@/blog.config'
 
-export default function TableOfContents ({ blockMap, frontMatter, pageTitle }) {
+export default function TableOfContents({ blockMap, frontMatter, pageTitle }) {
   let collectionId, page
   if (pageTitle) {
     collectionId = Object.keys(blockMap.block)[0]
@@ -19,7 +19,7 @@ export default function TableOfContents ({ blockMap, frontMatter, pageTitle }) {
   /**
    * @param {string} id - The ID of target heading block (could be in UUID format)
    */
-  function scrollTo (id) {
+  function scrollTo(id) {
     id = id.replaceAll('-', '')
     const target = document.querySelector(`.notion-block-${id}`)
     if (!target) return
@@ -39,7 +39,7 @@ export default function TableOfContents ({ blockMap, frontMatter, pageTitle }) {
       {pageTitle && (
         <Link
           passHref
-          href={`${BLOG.path}/${frontMatter.slug}`}
+          href={`${BLOG.path}/article/${frontMatter.slug}`}
           scroll={false}
           className='block -ml-6 mb-2 p-2 hover:bg-gray-200 hover:dark:bg-gray-700 rounded-lg'
         >

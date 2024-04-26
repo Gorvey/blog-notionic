@@ -1,3 +1,10 @@
+/*
+ * @Author: zengzhe
+ * @Date: 2024-04-26 09:30:38
+ * @LastEditors: zengzhe
+ * @LastEditTime: 2024-04-26 10:58:11
+ * @Description: 
+ */
 import BLOG from '@/blog.config'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -8,7 +15,7 @@ import FormattedDate from '@/components/Common/FormattedDate'
 const BlogPost = ({ post }) => {
   return (
     <motion.div>
-      <Link passHref href={`${BLOG.path}/${post.slug}`} scroll={false}>
+      <Link passHref href={`${BLOG.path}/article/${post.slug}`} scroll={false}>
         <article
           key={post.id}
           className='group flex flex-col overflow-hidden relative mb-5 md:mb-8 cursor-pointer rounded-xl p-5'
