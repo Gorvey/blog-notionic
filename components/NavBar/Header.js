@@ -141,7 +141,7 @@ const NavBar = () => {
 }
 
 const Header = ({ navBarTitle, fullWidth }) => {
-  const [showTitle, setShowTitle] = useState(false)
+  const [showTitle, setShowTitle] = useState(true)
   const useSticky = !BLOG.autoCollapsedNavBar
   const navRef = useRef(/** @type {HTMLDivElement} */ undefined)
   const sentinelRef = useRef(/** @type {HTMLDivElement} */ undefined)

@@ -14,7 +14,6 @@ import '@/styles/globals.css'
 import '@/styles/notion.css'
 import BLOG from '@/blog.config'
 import dynamic from 'next/dynamic'
-import Scripts from '@/components/Common/Scripts'
 import { ThemeProvider } from 'next-themes'
 import TransitionEffect from '@/components/Common/TransitionEffect'
 import { useRouter } from 'next/router'
@@ -23,9 +22,9 @@ import NProgress from 'nprogress'
 import '@/styles/nprogress.css'
 import Header from '@/components/NavBar/Header'
 import Footer from '@/components/NavBar/Footer'
-
-const Ackee = dynamic(() => import('@/components/Common/Ackee'), { ssr: false })
-const Gtag = dynamic(() => import('@/components/Common/Gtag'), { ssr: false })
+import ExternalPlugin from '@/components/ExternalPlugins'
+// const Ackee = dynamic(() => import('@/components/Common/Ackee'), { ssr: false })
+// const Gtag = dynamic(() => import('@/components/Common/Gtag'), { ssr: false })
 
 function MyApp({ Component, pageProps }) {
   // https://github.com/vercel/next.js/blob/canary/examples/with-loading/pages/_app.js
@@ -53,30 +52,20 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Scripts />
-      {BLOG.isProd && BLOG?.analytics?.provider === 'ackee' && (
-        <Ackee
-          ackeeServerUrl={BLOG.analytics.ackeeConfig.dataAckeeServer}
-          ackeeDomainId={BLOG.analytics.ackeeConfig.domainId}
-        />
-      )}
-      {BLOG.isProd && BLOG?.analytics?.provider === 'ga' && <Gtag />}
+      <ExternalPlugin />
       <ThemeProvider attribute='class'>
         <Header
           navBarTitle={pageProps.post ? pageProps.post.title : null}
           fullWidth={pageProps.post ? pageProps.post.fullWidth : false}
         />
         <TransitionEffect>
-            <div
-              className={`min-h-[calc(100vh-14rem)] md:min-h-[calc(100vh-18rem)] ${
-                BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
+          <div
+            className={`min-h-[calc(100vh-14rem)] md:min-h-[calc(100vh-18rem)] ${BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
               }`}
-            >
-              <Component {...pageProps} />
-            </div>
+          >
+            <Component {...pageProps} />
+          </div>
         </TransitionEffect>
-        {/* <Footer fullWidth={pageProps.post ? pageProps.post.fullWidth : false} /> */}
-        {/* <Footer className="fixed bottom-0" fullWidth={pageProps.post ? pageProps.post.fullWidth : false} /> */}
       </ThemeProvider>
       <Footer className="fixed bottom-0" fullWidth={pageProps.post ? pageProps.post.fullWidth : false} />
     </>

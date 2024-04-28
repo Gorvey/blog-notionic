@@ -107,7 +107,7 @@ export async function getStaticProps({ params: { subpage } }) {
   } else {
     return {
       props: { post, blockMap },
-      revalidate: 86400
+      revalidate: 43200
     }
   }
 }
