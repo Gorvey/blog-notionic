@@ -2,7 +2,7 @@
  * @Author: zengzhe
  * @Date: 2024-04-22 17:23:52
  * @LastEditors: zengzhe
- * @LastEditTime: 2024-04-26 16:35:03
+ * @LastEditTime: 2024-04-28 11:26:25
  * @Description:
  */
 const BLOG = {
@@ -47,6 +47,8 @@ const BLOG = {
     keywords: ['Notionic', 'Anjhon', 'Blog', '机器学习', '生活'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
   },
+  // 微软 Clarity 站点分析
+  CLARITY_ID: process.env.CLARITY_ID || null, // 只需要复制Clarity脚本中的ID部分，ID是一个十位的英文数字组合
   notionPageId:
     process.env.NOTION_PAGE_ID || '13990d4337d14fac9c59aadf8de1e69d', // DO NOT CHANGE THIS! Edit .env file!
   notionSpacesId: process.env.NOTION_SPACES_ID, // DO NOT CHANGE THIS! Edit .env file!
