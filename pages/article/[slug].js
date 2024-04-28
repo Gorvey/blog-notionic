@@ -2,7 +2,7 @@
  * @Author: zengzhe
  * @Date: 2024-04-26 11:04:15
  * @LastEditors: zengzhe
- * @LastEditTime: 2024-04-26 19:10:23
+ * @LastEditTime: 2024-04-28 14:59:41
  * @Description: 
  */
 import Layout from '@/layouts/layout'
@@ -13,7 +13,7 @@ import Loading from '@/components/Loading'
 import NotFound from '@/components/NotFound'
 
 const Post = ({ post, blockMap }) => {
-  console.log(post)
+
   const router = useRouter()
   if (router.isFallback) {
     return <Loading />
@@ -45,7 +45,7 @@ export async function getStaticProps({ params: { slug } }) {
         post,
         blockMap
       },
-      revalidate: 86400
+      revalidate: 43200
     }
   } catch (err) {
     console.error(err)

@@ -23,8 +23,8 @@ import '@/styles/nprogress.css'
 import Header from '@/components/NavBar/Header'
 import Footer from '@/components/NavBar/Footer'
 import ExternalPlugin from '@/components/ExternalPlugins'
-const Ackee = dynamic(() => import('@/components/Common/Ackee'), { ssr: false })
-const Gtag = dynamic(() => import('@/components/Common/Gtag'), { ssr: false })
+// const Ackee = dynamic(() => import('@/components/Common/Ackee'), { ssr: false })
+// const Gtag = dynamic(() => import('@/components/Common/Gtag'), { ssr: false })
 
 function MyApp({ Component, pageProps }) {
   // https://github.com/vercel/next.js/blob/canary/examples/with-loading/pages/_app.js

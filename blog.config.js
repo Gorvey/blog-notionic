@@ -2,7 +2,7 @@
  * @Author: zengzhe
  * @Date: 2024-04-22 17:23:52
  * @LastEditors: zengzhe
- * @LastEditTime: 2024-04-28 11:26:25
+ * @LastEditTime: 2024-04-28 16:02:45
  * @Description:
  */
 const BLOG = {
@@ -11,7 +11,7 @@ const BLOG = {
   email: 'gorvey76@outlook.com',
   link: 'https://zmix.cn',
   newsletter: 'Notionic Weekly',
-  description: '但行好事，莫问前程',
+  description: '志存高远，脚踏实地',
   lang: 'zh-CN', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   timezone: 'Asia/Shanghai', // See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
   appearance: 'auto', // ['light', 'dark', 'auto'],
@@ -44,13 +44,13 @@ const BLOG = {
     telegram: ''
   },
   seo: {
-    keywords: ['Notionic', 'Anjhon', 'Blog', '机器学习', '生活'],
+    keywords: ['zmix', 'Gorvey', 'Blog', '前端技术', '读书'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
   },
   // 微软 Clarity 站点分析
-  CLARITY_ID: process.env.CLARITY_ID || null, // 只需要复制Clarity脚本中的ID部分，ID是一个十位的英文数字组合
+  clarityID: process.env.NEXT_PUBLIC_CLARITY_ID || null, // 只需要复制Clarity脚本中的ID部分，ID是一个十位的英文数字组合
   notionPageId:
-    process.env.NOTION_PAGE_ID || '13990d4337d14fac9c59aadf8de1e69d', // DO NOT CHANGE THIS! Edit .env file!
+    process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS! Edit .env file!
   notionSpacesId: process.env.NOTION_SPACES_ID, // DO NOT CHANGE THIS! Edit .env file!
   notionAccessToken: process.env.NOTION_ACCESS_TOKEN, // Useful if you prefer not to make your database public
   notionDomain: 'izuolan.notion.site',

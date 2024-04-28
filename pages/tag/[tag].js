@@ -18,7 +18,7 @@ export async function getStaticProps({ params }) {
       posts: filteredPosts,
       currentTag
     },
-    revalidate: 86400
+    revalidate: 43200
   }
 }
 

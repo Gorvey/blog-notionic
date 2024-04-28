@@ -11,8 +11,8 @@ class MyDocument extends Document {
     return (
       <Html lang={BLOG.lang}>
         <Head>
-          <link rel='icon' href='/favicon.ico' />
-          <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
+          {/* <link rel='icon' href='/favicon.ico' /> */}
+          <link rel='icon' href='/favicon.png' type='image/png' />
           <link
             rel='apple-touch-icon'
             sizes='192x192'
