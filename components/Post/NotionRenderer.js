@@ -1,39 +1,47 @@
+/*
+ * @Author: zengzhe
+ * @Date: 2024-04-26 09:30:38
+ * @LastEditors: zengzhe
+ * @LastEditTime: 2024-05-14 10:53:04
+ * @Description: 
+ */
 import BLOG from '@/blog.config'
 import PropTypes from 'prop-types'
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 
 import { NotionRenderer as Renderer } from 'react-notion-x'
-
+import { SandPackCode } from '../Common/Code'
 // Lazy-load some heavy components & override the renderers of some block types
 const components = {
   // Code block
-  Code: dynamic(() => {
-    return import('react-notion-x/build/third-party/code').then(async module => {
-      // Additional prismjs syntax
-      await Promise.all([
-        import('prismjs/components/prism-bash'),
-        import('prismjs/components/prism-c'),
-        import('prismjs/components/prism-cpp'),
-        import('prismjs/components/prism-docker'),
-        import('prismjs/components/prism-js-templates'),
-        import('prismjs/components/prism-diff'),
-        import('prismjs/components/prism-git'),
-        import('prismjs/components/prism-go'),
-        import('prismjs/components/prism-graphql'),
-        import('prismjs/components/prism-makefile'),
-        import('prismjs/components/prism-markdown'),
-        import('prismjs/components/prism-python'),
-        import('prismjs/components/prism-rust'),
-        import('prismjs/components/prism-solidity'),
-        import('prismjs/components/prism-sql'),
-        import('prismjs/components/prism-swift'),
-        import('prismjs/components/prism-wasm'),
-        import('prismjs/components/prism-yaml')
-      ])
-      return module.Code
-    })
-  }),
+  Code: SandPackCode,
+  // Code: dynamic(() => {
+  //   return import('react-notion-x/build/third-party/code').then(async module => {
+  //     // Additional prismjs syntax
+  //     await Promise.all([
+  //       import('prismjs/components/prism-bash'),
+  //       import('prismjs/components/prism-c'),
+  //       import('prismjs/components/prism-cpp'),
+  //       import('prismjs/components/prism-docker'),
+  //       import('prismjs/components/prism-js-templates'),
+  //       import('prismjs/components/prism-diff'),
+  //       import('prismjs/components/prism-git'),
+  //       import('prismjs/components/prism-go'),
+  //       import('prismjs/components/prism-graphql'),
+  //       import('prismjs/components/prism-makefile'),
+  //       import('prismjs/components/prism-markdown'),
+  //       import('prismjs/components/prism-python'),
+  //       import('prismjs/components/prism-rust'),
+  //       import('prismjs/components/prism-solidity'),
+  //       import('prismjs/components/prism-sql'),
+  //       import('prismjs/components/prism-swift'),
+  //       import('prismjs/components/prism-wasm'),
+  //       import('prismjs/components/prism-yaml')
+  //     ])
+  //     return module.Code
+  //   })
+  // }),
   // Database block
   Collection: dynamic(() => {
     return import('react-notion-x/build/third-party/collection').then(module => module.Collection)
@@ -51,7 +59,7 @@ const components = {
  *
  * @param props - Anything that react-notion-x/NotionRenderer supports
  */
-export default function NotionRenderer (props) {
+export default function NotionRenderer(props) {
   const { locale } = useRouter()
   const mapPageUrl = (id) => {
     // console.log('mapPageUrl', BLOG.lang.split('-')[0])

@@ -1,4 +1,12 @@
+/*
+ * @Author: zengzhe
+ * @Date: 2024-04-26 09:30:38
+ * @LastEditors: zengzhe
+ * @LastEditTime: 2024-05-14 14:28:29
+ * @Description: 
+ */
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { getSandpackCssText } from "@codesandbox/sandpack-react";
 import BLOG from '@/blog.config'
 
 class MyDocument extends Document {
@@ -24,6 +32,10 @@ class MyDocument extends Document {
             title='RSS 2.0'
             href='/feed'
           ></link>
+          <style
+            dangerouslySetInnerHTML={{ __html: getSandpackCssText() }}
+            id="sandpack"
+          />
           {BLOG.appearance === 'auto' ? (
             <>
               <meta

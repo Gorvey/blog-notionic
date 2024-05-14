@@ -145,3 +145,10 @@ nav {
 ::view-transition-new(root) {
   z-index: 1;
 }
+
+.sp-wrapper,
+.sp-layout > .sp-stack {
+  height: unset !important;
+  min-height: 200px;
+  max-height: 500px;
+}
