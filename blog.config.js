@@ -49,13 +49,12 @@ const BLOG = {
   },
   // 微软 Clarity 站点分析
   clarityID: process.env.NEXT_PUBLIC_CLARITY_ID || null, // 只需要复制Clarity脚本中的ID部分，ID是一个十位的英文数字组合
-  notionPageId:
-    process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS! Edit .env file!
+  notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS! Edit .env file!
   notionSpacesId: process.env.NOTION_SPACES_ID, // DO NOT CHANGE THIS! Edit .env file!
   notionAccessToken: process.env.NOTION_ACCESS_TOKEN, // Useful if you prefer not to make your database public
   notionDomain: 'izuolan.notion.site',
   telegramToken: process.env.TELEGRAM_TOKEN, // The token of your Telegram bot
-  telegramChatId: '', // The chat id of your Telegram bot
+  telegramChatId: '531640703', // The chat id of your Telegram bot
   telegramChannelUrl: '', // The link of your Telegram channel
   telegramChannelName: '', // The name of your Telegram channel
   craftConfigShareUrl: 'https://www.craft.do/s/kQtcWqkv98cHhB', // The link to share your craft config
@@ -81,12 +80,13 @@ const BLOG = {
   comment: {
     // support provider: utterances, supacomments
     // provider: 'supacomments', // leave it empty if you don't need any comment plugin
-    provider: '', // leave it empty if you don't need any comment plugin
+    provider: 'supacomments', // leave it empty if you don't need any comment plugin
     supaCommentsConfig: {
       // supabaseUrl: 'https://quxcrqxbqxiolseqelal.supabase.co', // The url of your Supabase instance
       // supabaseAnonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF1eGNycXhicXhpb2xzZXFlbGFsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDg2Nzc0MjgsImV4cCI6MjAyNDI1MzQyOH0.oBp-krn-IacLsuO65XsL_9uGG_Z48z3n4X66KPie1yM' // The anonymous key of your Supabase instance
-      supabaseUrl: '', // The url of your Supabase instance
-      supabaseAnonKey: '' // The anonymous key of your Supabase instance
+      supabaseUrl: 'https://dsjylimdeqzhcveytdgt.supabase.co', // The url of your Supabase instance
+      supabaseAnonKey:
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzanlsaW1kZXF6aGN2ZXl0ZGd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQzMTYxNzksImV4cCI6MjAyOTg5MjE3OX0._sxeKG4qTZF6ZpHowMD5rQaVZ-u3x4eqDFkhy_mjg8I' // The anonymous key of your Supabase instance
     },
     utterancesConfig: {
       repo: ''
